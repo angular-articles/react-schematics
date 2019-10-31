@@ -5,24 +5,46 @@
   "type": "object",
   "description": "Creates a new generic component definition in the given or default project.",
   "properties": {
+    "allOf": [
+      { "$ref": "../schema.json#/definitions/schemaOptions/path" },
+      { "$ref": "../schema.json#/definitions/schemaOptions/name" },
+      { "$ref": "../schema.json#/definitions/schemaOptions/isFunc" },
+      { "$ref": "../schema.json#/definitions/schemaOptions/flat" },
+      { "$ref": "../schema.json#/definitions/project/properties/styleExt" }
+    ],
     "path": {
       "$ref": "../schema.json#/definitions/schemaOptions/path",
+      "allOf": [
+        { "$ref": "../schema.json#/definitions/schemaOptions/path" }
+      ],
       "description": "The path at which to create the component file, relative to the current workspace. Default is a folder with the same name as the component in the project root.",
       "default": "ui/components"
     },
     "name": {
-      "$ref": "../schema.json#/definitions/schemaOptions/name",
+      "$ref": "../schema.json#/definitions/",
+      "allOf": [
+        { "$ref": "../schema.json#/definitions/schemaOptions/name" }
+      ],
       "description": "The name of the component.",
       "x-prompt": "What name would you like to use for the component?"
     },
     "isFunc": {
-      "$ref": "../schema.json#/definitions/schemaOptions/isFunc"
+      "$ref": "../schema.json#/definitions/schemaOptions/isFunc",
+      "allOf": [
+        { "$ref": "../schema.json#/definitions/schemaOptions/isFunc" }
+      ]
     },
     "flat": {
-      "$ref": "../schema.json#/definitions/schemaOptions/flat"
+      "$ref": "../schema.json#/definitions/schemaOptions/flat",
+      "allOf": [
+        { "$ref": "../schema.json#/definitions/schemaOptions/flat" }
+      ]
     },
     "styleExt": {
-      "$ref": "../schema.json#/definitions/project/properties/styleExt"
+      "$ref": "../schema.json#/definitions/project/properties/styleExt",
+      "allOf": [
+        { "$ref": "../schema.json#/definitions/project/properties/styleExt" }
+      ]
     }
   },
   "required": [
