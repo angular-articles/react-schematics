@@ -7,6 +7,7 @@ import { validateName } from '../_utility/validation';
 
 // You don't have to export the function as default. You can also have more than one rule factory per file.
 export function component(options: any): Rule {
+  console.log('test');
   return async (host: Tree) => {
     const workspace = await getWorkspace(host);
     const project = workspace.projects.get(options.project as string);

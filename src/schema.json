@@ -12,42 +12,76 @@
     "version": {
       "type": "number"
     },
-    "styleExt": {
-      "type": "string",
-      "default": "jss",
-      "enum": [
-        "css",
-        "scss",
-        "sass",
-        "less",
-        "styl",
-        "jss"
-      ]
-    },
-    "root": {
-      "$ref": "#/definitions/path",
-      "default": ""
-    },
-    "sourceRoot": {
-      "$ref": "#/definitions/path",
-      "default": "src"
-    },
-    "componentsRoot": {
-      "$ref": "#/definitions/path",
-      "default": "components"
-    },
-    "containersRoot": {
-      "$ref": "#/definitions/path",
-      "default": "containers"
-    },
-    "pagesRoot": {
-      "$ref": "#/definitions/path",
-      "default": "pages"
+    "project": {
+      "$ref": "#/definitions/project"
     }
   },
+  "additionalProperties": false,
   "definitions": {
-    "path": {
-      "type": "string"
+    "schemaOptions": {
+      "name": {
+        "type": "string",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        }
+      },
+      "path": {
+        "type": "string",
+        "format": "path",
+        "default": ""
+      },
+      "flat": {
+        "type": "boolean",
+        "description": "When true, creates the new files at the top level of the current project.",
+        "default": false
+      },
+      "isFunc": {
+        "type": "string",
+        "description": "Type of the component.",
+        "enum": [
+          "func",
+          "class"
+        ],
+        "default": "func"
+      }
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "root": {
+          "$ref": "#/definitions/schemaOptions/path",
+          "default": ""
+        },
+        "sourceRoot": {
+          "$ref": "#/definitions/schemaOptions/path",
+          "default": "src"
+        },
+        "componentsRoot": {
+          "$ref": "#/definitions/schemaOptions/path",
+          "default": "components"
+        },
+        "containersRoot": {
+          "$ref": "#/definitions/schemaOptions/path",
+          "default": "containers"
+        },
+        "pagesRoot": {
+          "$ref": "#/definitions/schemaOptions/path",
+          "default": "pages"
+        },
+        "styleExt": {
+          "type": "string",
+          "default": "jss",
+          "enum": [
+            "css",
+            "scss",
+            "sass",
+            "less",
+            "styl",
+            "jss"
+          ]
+        }
+      }
     }
   }
 }

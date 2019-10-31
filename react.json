@@ -1,10 +1,12 @@
 {
   "$schema": "./src/schema.json",
   "version": 1,
-  "root": "",
-  "sourceRoot": "build",
-  "componentsRoot": "ui/components",
-  "containersRoot": "ui/containers",
-  "pagesRoot": "ui/pages",
-  "styleExt": "less"
+  "project": {
+    "root": "",
+    "sourceRoot": "build",
+    "componentsRoot": "ui/components",
+    "containersRoot": "ui/containers",
+    "pagesRoot": "ui/pages",
+    "styleExt": "scss"
+  }
 }
