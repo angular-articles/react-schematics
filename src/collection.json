@@ -1,0 +1,17 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component": {
+      "aliases": ["c"],
+      "description": "A blank schematic.",
+      "factory": "./component/index#component",
+      "schema": "./component/schema.json"
+    },
+    "container": {
+      "aliases": ["con"],
+      "description": "A blank schematic.",
+      "factory": "./component/index#component",
+      "schema": "./container/schema.json"
+    }
+  }
+}

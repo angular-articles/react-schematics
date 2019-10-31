@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsReactProject",
+  "title": "React Project Options Schema",
+  "type": "object",
+  "description": "Creates a new generic component definition in the given or default project.",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "version": {
+      "type": "number"
+    },
+    "styleExt": {
+      "type": "string",
+      "default": "jss",
+      "enum": [
+        "css",
+        "scss",
+        "sass",
+        "less",
+        "styl",
+        "jss"
+      ]
+    },
+    "root": {
+      "$ref": "#/definitions/path",
+      "default": ""
+    },
+    "sourceRoot": {
+      "$ref": "#/definitions/path",
+      "default": "src"
+    },
+    "componentsRoot": {
+      "$ref": "#/definitions/path",
+      "default": "components"
+    },
+    "containersRoot": {
+      "$ref": "#/definitions/path",
+      "default": "containers"
+    },
+    "pagesRoot": {
+      "$ref": "#/definitions/path",
+      "default": "pages"
+    }
+  },
+  "definitions": {
+    "path": {
+      "type": "string"
+    }
+  }
+}

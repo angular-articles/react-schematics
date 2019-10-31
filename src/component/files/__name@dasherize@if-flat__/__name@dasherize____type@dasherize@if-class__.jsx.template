@@ -1,0 +1,18 @@
+import React from 'react';
+import * as PropTypes from 'prop-types';
+
+class <%= classify(name) %> extends React.Component {
+  render() {
+    return (
+      <div>{this.props.child}</div>
+    );
+  }
+}
+
+<%= classify(name) %>.propTypes = {
+  child: PropTypes.string.isRequired,
+};
+
+<%= classify(name) %>.defaultProps = {
+  child: 'child text',
+};

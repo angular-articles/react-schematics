@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../Users/user/AppData/Roaming/npm/node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "angular-example": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "build"
+    }
+  }
+}
